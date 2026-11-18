@@ -1,0 +1,6 @@
+{
+  "name": "ระบบจัดการสต็อคสินค้า - บริษัท พิพุทพูนผล จำกัด",
+  "description": "ระบบบริหารจัดการคลังสินค้า รับเข้า เบิกออก สแกนบาร์โค้ด และรายงานสต็อคคงเหลือ PDF/Excel เชื่อมต่อ Google Sheets สำหรับบริษัท พิพุทพูนผล จำกัด",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Prompt", "IBM Plex Sans Thai", sans-serif;
+  --font-sans: "IBM Plex Sans Thai", "Prompt", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-brand-950: #0b2415;
+  --color-brand-900: #143d24;
+  --color-brand-800: #184e2e;
+  --color-brand-700: #1d633a;
+  --color-brand-600: #247a47;
+  --color-brand-50: #f1f8f3;
+
+  --color-gold-600: #b88b2a;
+  --color-gold-500: #cca03d;
+  --color-gold-100: #faf3e0;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Official Google Sign-In Button Styling */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #0f172a;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  letter-spacing: 0.01em;
+  outline: none;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 150ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gsi-material-button:hover:not(:disabled) {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.gsi-material-button:active:not(:disabled) {
+  background-color: #f1f5f9;
+}
+
+.gsi-material-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.gsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.gsi-material-button-icon {
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+}
+
+.gsi-material-button-contents {
+  white-space: nowrap;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}
